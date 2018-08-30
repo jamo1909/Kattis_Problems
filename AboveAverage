@@ -1,0 +1,51 @@
+Question: https://open.kattis.com/problems/aboveaverage
+
+
+import java.util.Scanner;
+public class AboveAverage {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		int test = scan.nextInt();
+		double arr[] = new double[test];
+		
+		for(int i=0; i<test;i++)
+		{
+			int num = scan.nextInt();
+			int grade[] = new int[num];
+			
+			for(int x=0;x<num;x++)
+			{
+				grade [x] = scan.nextInt();
+			}
+			double y =0;
+			
+			int average =0;
+			for(int z=0; z<grade.length;z++ )
+			{
+				average += grade[z];
+			}
+			average = average/grade.length;
+			
+			for(int x=0;x<num;x++)
+			{
+				
+				if(grade [x] > average)
+				{
+					y++;
+				}
+			}
+			
+			double result = ((double)y/num)*100;
+			arr[i] = result;
+		}
+		
+		for(int y=0; y<test;y++)
+		{
+			System.out.printf("%.3f",arr[y] );
+			System.out.println("");
+		}
+	}
+
+}
