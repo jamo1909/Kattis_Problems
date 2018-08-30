@@ -44,7 +44,7 @@ public class AboveAverage {
 		for(int y=0; y<test;y++)
 		{
 			System.out.printf("%.3f",arr[y] );
-			System.out.println("");
+			System.out.println("%");
 		}
 	}
 
